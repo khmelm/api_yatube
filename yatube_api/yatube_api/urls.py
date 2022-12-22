@@ -3,12 +3,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from rest_framework.authtoken import views
 
 urlpatterns = [
-    path('', include('api.urls', namespace='api')),
+    path('api/v1/', include('api.urls', namespace='api')),
     path('admin/', admin.site.urls),
-    path('api/v1/api-token-auth/', views.obtain_auth_token),
 ]
 
 
